@@ -4,6 +4,7 @@ from .models import Post
 
 
 def index(request):
-    return render(request,'index.html')
+    posts = Post.objects.all()
+    return render(request,'index.html',{'posts':posts})
 
 # Create your views here.
