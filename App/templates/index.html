@@ -1,1 +1,9 @@
 <h1>Blog</h1>
+{% for post in posts %}
+<hr>
+<h2>{{posts.title}}</h2>
+<h3>{{posts.author}}</h3>
+<h4>{{posts.created_on}}</h4>
+<p>{{posts.content}}</p>
+<hr>
+{% endfor %}
