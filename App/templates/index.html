@@ -1,9 +1,13 @@
-<h1>Blog</h1>
+<h1 style="color: aquamarine;">Blog</h1>
+<body>
 {% for post in posts %}
+
 <hr>
-<h2>{{posts.title}}</h2>
-<h3>{{posts.author}}</h3>
-<h4>{{posts.created_on}}</h4>
-<p>{{posts.content}}</p>
+<h2>{{post.title}}</h2>
+<h3>{{post.author}}</h3>
+<h4>{{post.created_on}}</h4>
+<p>{{post.content|truncatewords:60}}</p>
+<a href="post/{{post.id}}">Learn More...</a>
 <hr>
-{% endfor %}
+</body>
+{% endfor %} 
