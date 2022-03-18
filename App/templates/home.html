@@ -33,8 +33,7 @@
             </ul>
             <a class = "btn" style="color:beige; background-color:aqua;" type="submit" id="header-links">Register</a>
      <a class = "btn" style="color:beige; background-color:aqua; margin-left:10px;" type="submit" id="header-links">Login</a>
-          </div>
-          
+          </div>     
         </div>
         </div>
     </nav>
@@ -43,7 +42,15 @@
         Read all you want on my blog. Choose from variety of posts and enjoy. Happy reading!
       </div>
     </div> 
-
+    <div class="col-md-8">
+      {% if messages%}
+        {%for message in messages%}
+          <div class="alert.{{message.tags}}">
+            {{message}}
+          </div>
+        {%endfor%}
+      {%endif%}
+    </div> 
     {% block content %}
 <!-- write your content here-->
     {% endblock content %}
